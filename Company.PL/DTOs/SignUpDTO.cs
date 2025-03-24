@@ -27,6 +27,6 @@ namespace Company.PL.DTOs
 
         [Compare("Password", ErrorMessage = "Password And ConfirmPassword Do Not Match")]
         public string ConfirmPassword { get; set; }
-        public bool? IsAgree { get; set; }
+        public bool IsAgree { get; set; }
     }
 }

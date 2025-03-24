@@ -5,6 +5,10 @@
 	Layout = "_Layout1";
 }
 
+@* for validation *@
+<div asp-validation-summary ="All" class="m-3 alert alert-info">
+	</div>
+
 <div class="main-agileinfo">
 	<div class="agileits-top">
 		<form asp-action="SignUp">
@@ -14,13 +18,13 @@
 			<input class="text" asp-for="Email" placeholder="Email" required="">
 			<input class="text" asp-for="Password" placeholder="Password" required="">
 			<input class="text" asp-for="ConfirmPassword" placeholder="Confirm Password" required="">
-			<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+			
 			<div class="wthree-text">
-				<label class="anim">
-					<input asp-for="IsAgree" class="checkbox" required="">
-					<span>I Agree To The Terms & Conditions</span>
-				</label>
-				<div class="clear"> </div>
+				<div class="checkbox-container">
+					<input type="checkbox" asp-for="IsAgree"  required>
+					<label asp-for="IsAgree">I Agree To The Terms & Conditions</label>
+				</div>
+				<div class="clear"></div>
 			</div>
 			<input type="submit" value="SIGNUP">
 		</form>
